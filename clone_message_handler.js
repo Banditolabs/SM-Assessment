@@ -11,7 +11,6 @@ const authHeader = {
 };
 
 async function cloneMessage(collectorId, messageId ) {
-    console.log("TESTING");
     try {
         const response = await axios.get(
             `${SM_API_BASE}/collectors/${collectorId}/messages/${messageId}`,

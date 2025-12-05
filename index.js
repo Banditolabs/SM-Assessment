@@ -173,7 +173,6 @@ app.post('/clone-message/:collectorId/:messageId', async (req, res) => {
     const {collectorId, messageId} = req.params;
     try {
         const newMessage = await cloneMessage(collectorId, messageId);
-        console.log("TESTING2")
         res.json({ success: true, newMessage });
     } catch (err) {
         res.status(err.response?.status || 500).json({ error: err.response?.data || err.message });
